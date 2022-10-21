@@ -11,7 +11,7 @@ let dataGlasses = [
 ];
 
 const domID = id => document.getElementById(id);
-const renderGlassList = () => {
+const renderGlassList = (id) => {
     const glasses = dataGlasses.reduce((glasses, arr) => {
         // console.log(arr);
         glasses += `
@@ -21,10 +21,10 @@ const renderGlassList = () => {
         `
         return glasses;
     }, "");
-    domID("vglassesList").innerHTML = glasses;
+    domID(id).innerHTML = glasses;
 }
 
-renderGlassList();
+renderGlassList("vglassesList");
 
 const renderLayout = (id) => {
     let content = "";
